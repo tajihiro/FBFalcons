@@ -18,7 +18,7 @@ class Admin::AuthenticationController < ApplicationController
   #
   def auth
     passwd = params[:passwd]
-    if passwd == '123' then
+    if passwd == '****' then
       #ログイン情報セッション登録
       session[:is_login] = true
       redirect_to admin_menu_index_path 
