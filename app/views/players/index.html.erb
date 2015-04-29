@@ -1,0 +1,36 @@
+<div data-role="page">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">Players</li>
+            <% @members.each do |member|%>
+            <li data-icon="search">
+                <%= link_to({:controller => "players", :action => "detail", :id => member.id}) do %>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        #<%= member.jersey_number %>
+                    </div>
+                    <div class="ui-block-b">
+                        <%= member.last_name %> <%= member.first_name %>
+                    </div>
+                    <div class="ui-block-c">
+                        <%= member.position.position_name %>
+                    </div>
+                </div>
+                <% end %>
+            </li>
+
+            <% end %>
+
+        </ul>
+
+    </div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "players"%>
+    <!-- /footer -->
+
+</div>
+

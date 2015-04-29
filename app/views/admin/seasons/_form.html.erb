@@ -1,0 +1,29 @@
+<%= form_for([:admin, @season]) do |f| %>
+  <% if @season.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@season.errors.count, "error") %> prohibited this season from being saved:</h2>
+
+      <ul>
+      <% @season.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :season_name %><br />
+    <%= f.text_field :season_name %>
+  </div>
+  <div class="field">
+    <%= f.label :season_start %><br />
+    <%= f.date_select :season_start %>
+  </div>
+  <div class="field">
+    <%= f.label :season_end %><br />
+    <%= f.date_select :season_end %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

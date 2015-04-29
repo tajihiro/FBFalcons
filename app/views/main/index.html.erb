@@ -1,0 +1,31 @@
+<div data-role="page">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+    <div data-role="content">
+        <!-- News -->
+        <div><b><%= @game.season.season_name %> <%= @game.game_name %></b></div>
+        <div><b><%= @game.game_date %> -  FINAL</b></div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" align="center"><h2><%= @game.home_team.team_name %></h2></div>
+            <div class="ui-block-b" align="center"><h1>vs</h1></div>
+            <div class="ui-block-c" align="center"><h2><%= @game.away_team.team_name %></h2></div>
+        </div>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" align="center"><h1><%= @game.home_team_score %></h1></div>
+            <div class="ui-block-b" align="center"><h1>-</h1></div>
+            <div class="ui-block-c" align="center"><h1><%= @game.away_team_score %></h1></div>
+        </div>
+        
+        <!-- Standings -->
+        <%= render "standings", :game_members => @game_members , :show_star => true %>
+        <!-- /Standings -->
+
+        
+    </div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "home"%>
+    <!-- /footer -->
+
+</div>

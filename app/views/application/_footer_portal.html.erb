@@ -1,0 +1,36 @@
+<div data-theme="a" data-role="footer" data-position="fixed">
+    <div data-role="navbar" data-iconpos="top">
+        <ul>
+            <li>
+                <% if menu == 'home' %>
+                <%= link_to("Home", {:controller => "main", :action =>"index"}, {"data-icon" => "home", :class =>"ui-btn-active", "data-ajax" => false})%>
+                <% else %>
+                <%= link_to("Home", {:controller => "main", :action =>"index"}, {"data-icon" => "home", "data-ajax" => false})%>
+                <% end %>
+            </li>
+            <li>
+                <% if menu == 'Games' %>
+                <%= link_to("Games", {:controller => "games", :action =>"seasons"}, {"data-icon" => "star", :class =>"ui-btn-active", "data-ajax" => false})%>
+                <% else %>
+                <%= link_to("Games", {:controller => "games", :action =>"seasons"}, {"data-icon" => "star", "data-ajax" => false})%>
+                <% end %>
+            </li>
+            <li>
+                <% if menu == 'players' %>
+                <%= link_to("Players", {:controller => "players", :action =>"index"}, {"data-icon" => "check", :class =>"ui-btn-active", "data-ajax" => false})%>
+                <% else %>
+                <%= link_to("Players", {:controller => "players", :action =>"index"}, {"data-icon" => "check", "data-ajax" => false})%>
+                <% end %>
+            </li>
+<!--            
+            <li>
+                <% if menu == 'stats' %>
+                <%= link_to("Stats", {:controller => "stats", :action =>"index"}, {"data-icon" => "grid", :class =>"ui-btn-active", "data-ajax" => false})%>
+                <% else %>
+                <%= link_to("Stats", {:controller => "stats", :action =>"index"}, {"data-icon" => "grid", "data-ajax" => false})%>
+                <% end %>
+            </li>
+-->
+        </ul>
+    </div>
+</div>

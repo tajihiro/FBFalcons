@@ -1,0 +1,37 @@
+<h1>Listing game_rosters</h1>
+
+<table>
+  <tr>
+    <th>Season roster</th>
+    <th>Game</th>
+    <th>Goal</th>
+    <th>Assistrails</th>
+    <th>Genernalties</th>
+    <th>Shots against</th>
+    <th>Goalie rails</th>
+    <th>Generatep flg</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @game_rosters.each do |game_roster| %>
+  <tr>
+    <td><%= game_roster.season_roster %></td>
+    <td><%= game_roster.game %></td>
+    <td><%= game_roster.goal %></td>
+    <td><%= game_roster.assistrails %></td>
+    <td><%= game_roster.genernalties %></td>
+    <td><%= game_roster.shot_on_goal %></td>
+    <td><%= game_roster.goalie_rails %></td>
+    <td><%= game_roster.generatep_flg %></td>
+    <td><%= link_to 'Show', game_roster %></td>
+    <td><%= link_to 'Edit', edit_admin_game_roster_path(game_roster) %></td>
+    <td><%= link_to 'Destroy', game_roster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Game roster', new_admin_game_roster_path %>

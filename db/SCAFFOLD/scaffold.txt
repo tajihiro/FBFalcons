@@ -1,0 +1,12 @@
+rails generate scaffold prefecture prefecture_name:string
+rails generate scaffold position position_name:string
+rails generate scaffold season season_name:string season_start:date season_end:date
+rails generate scaffold division division_name:string 
+rails generate scaffold game team_id:integer home_team_id:integer home_team_score:integer away_team_id:integer away_team_score:integer game_date:date game_time:time game_place:string movie_url:text commnets:text 
+rails generate scaffold team team_name:string prefecture:references home_place:string since:string image_url:text 
+rails generate scaffold member last_name:string first_name:string last_en_name:string first_en_name:string nick_name:string jersey_number:string position:references gender:integer address:string birth_place:string birthday:date image_url:text
+rails generate scaffold team_member team:references member:references
+rails generate scaffold season_roster season:references division:references member:references
+rails generate scaffold game_roster season_roster:references game:references goal:integer assist:integer penalties:float shots_against:integer goalie_flg:integer mvp_flg:integer
+
+rails generate scaffold admin/season_team season:references division:references team:references

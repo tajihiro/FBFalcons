@@ -1,0 +1,139 @@
+<div data-role="page" data-add-back-btn="true" data-back-btn-text="Back">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+    <div data-role="content">
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <%= image_tag @member.image_url %>
+            </div>
+            <div class="ui-block-b">
+                <div>
+                    <b><big><%= @member.jersey_number %></big> <%= @member.position.position_name %></b>
+                </div>
+                <div>
+                    <b> <%= @member.first_en_name %>　<%= @member.last_en_name %></b>
+                </div>
+                <div>
+                    <b><%= @member.last_name %> <%= @member.first_name %></b>
+                </div>
+            </div>
+        </div>
+        <div>
+            現住所 : <%= @member.address %>
+        </div>
+        <div>
+            出身地 : <%= @member.birth_place %>
+        </div>
+        <div>
+            生年月日 : <%= @member.birthday %>
+        </div>
+    </div>
+    <div data-role="contents">
+		<div>Records</div>
+<!-- Goalie Standings -->
+<div data-role="listview">
+    <li data-role="list-divider">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                Season
+            </div>
+            <div class="ui-block-c">
+                Save%
+            </div>
+            <div class="ui-block-e">
+                Save
+            </div>
+            <div class="ui-block-d">
+                SOG
+            </div>
+            <div class="ui-block-b">
+                PIM
+            </div>
+        </div>
+    </li>
+    
+    
+    <% @records.each do | record | %>
+    <% if record.goalie_flg == 1 %>
+    <li data-icon="search">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                <%= record.season_name %>
+                <i class="icon-star"><%= record.mvp_cnt%></i>
+            </div>
+            <div class="ui-block-b" align="center">
+                <%= number_with_precision(record.save_ave, :precision => 3)  %>
+            </div>
+            <div class="ui-block-c" align="center">
+                <%= record.saves %>
+            </div>
+            <div class="ui-block-d" align="center">
+                <%= record.shot_on_goal %>
+            </div>
+            <div class="ui-block-e" align="center">
+                <%= record.penalties  %>
+            </div>
+        </div> 
+    </li>
+    <% end %>
+    <% end %>
+</div>
+<p></p>
+<!-- Player Standings -->
+<div data-role="listview">
+    <li data-role="list-divider">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                Season
+            </div>
+            <div class="ui-block-b">
+                Goal
+            </div>
+            <div class="ui-block-c">
+                Aassist
+            </div>
+            <div class="ui-block-d">
+                Point
+            </div>
+            <div class="ui-block-e">
+                PIM
+            </div>
+        </div>
+    </li>
+	
+    <% @records.each do | record | %>
+    <% if record.goalie_flg != 1 %>
+    <li data-icon="search">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                <%= record.season_name %>
+                <i class="icon-star"><%= record.mvp_cnt%></i>
+                
+            </div>
+            <div class="ui-block-b" align="center">
+                <%= record.goal  %>
+            </div>
+            <div class="ui-block-c" align="center">
+                <%= record.assist  %>
+            </div>
+            <div class="ui-block-d" align="center">
+                <%= record.point.truncate  %>
+            </div>
+            <div class="ui-block-e" align="center">
+                <%= record.penalties  %>
+            </div>
+        </div>
+    </li>
+    <% end %>
+    <% end %>
+</div>
+		
+	</div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "players"%>
+    <!-- /footer -->
+
+</div>
+

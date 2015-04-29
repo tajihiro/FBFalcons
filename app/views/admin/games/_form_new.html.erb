@@ -1,0 +1,136 @@
+<%= form_for([:admin, @game]) do |f| %>
+<%= f.hidden_field :season_id %>
+<%= f.hidden_field :division_id %>
+<%= f.hidden_field :team_id %>
+
+<% if @game.errors.any? %>
+<div id="error_explanation">
+    <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+    <ul>
+        <% @game.errors.full_messages.each do |msg| %>
+        <li>
+            <%= msg %>
+        </li>
+        <% end %>
+    </ul>
+</div>
+<% end %>
+
+<div>
+    Place
+</div>
+<div>
+    <%= f.text_field :game_place %>
+</div>
+<div>
+    Game Name
+</div>
+<div>
+    <%= f.text_field :game_name %>
+</div>
+
+<div>
+    Date
+</div>
+<div>
+    <%= f.date_select :game_date, {:use_month_numbers => true} %>
+</div>
+<div>
+    Time
+</div>
+<div>
+    <%= f.time_select :game_time, {:minute_step => 30, :time_separator => ""} %>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a">
+        <%= f.label "HOME" %>
+        <br />
+        <%= f.collection_select(:home_team_id, @season_teams, :team_id, :team_name) %>
+    </div>
+    <div class="ui-block-b">
+        <%= f.label "AWAY" %>
+        <br />
+        <%= f.collection_select(:away_team_id, @season_teams, :team_id, :team_name) %>
+    </div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a">
+        <%= f.number_field :home_team_score, :min => 0 %>
+    </div>
+    <div class="ui-block-b">
+        <%= f.number_field :away_team_score, :min => 0 %>
+    </div>
+</div>
+
+<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+    <% @season_members.each do |member| %>
+    <div data-role="collapsible" data-collapsed="false">
+        <h3><%= member.member.last_name %> <%= member.member.first_name %></h3>
+        <%= hidden_field_tag 'member_id[]', member.member.id%>
+        <p>
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    Goal
+                    <br />
+                    <%= number_field_tag 'goal[]', 0, :min => 0 %>
+                </div>
+                <div class="ui-block-b">
+                    Assist
+                    <br />
+                    <%= number_field_tag 'assist[]', 0, :min => 0 %>
+                </div>
+                <div class="ui-block-c">
+                    PIM
+                    <br />
+                    <%= number_field_tag 'penalties[]', 0, :min => 0 %>
+                </div>
+            </div>
+        </p>
+        <p>
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    Goal Against
+                    <br />
+                    <%= number_field_tag 'goal_against[]', 0, :min => 0 %>
+                </div>
+                <div class="ui-block-b">
+                    SOG
+                    <br />
+                    <%= number_field_tag 'shot_on_goal[]', 0, :min => 0 %>
+                </div>
+            </div>
+        </p>
+        <p>
+            <div >
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <label for="goalie_flg_<%= member.member.id %>">Goalie</label>
+                    <% goalie_flg = "goalie_flg[" + member.member.id.to_s + "]" %>
+                    <%= check_box_tag goalie_flg, 1 %>
+
+                    <label for="mvp_flg_<%= member.member.id %>">MVP</label>
+                    <% mvp_flg = "mvp_flg[" + member.member.id.to_s + "]" %>
+                    <%= check_box_tag mvp_flg, 1 %>
+
+                    <label for="join_flg_<%= member.member.id %>">JOIN</label>
+                    <% join_flg = "join_flg[" + member.member.id.to_s + "]" %>
+                    <%= check_box_tag join_flg, 0 %>
+            </div>
+        </p>
+    </div>
+    <% end %>
+</div>
+
+<div>
+    Comments
+</div>
+<div>
+    <%= f.text_area :comments %>
+</div>
+
+<div class="actions">
+    <%= f.submit %>
+</div>
+<% end %>

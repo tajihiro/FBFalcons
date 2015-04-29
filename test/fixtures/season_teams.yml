@@ -1,0 +1,146 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+team_28_1:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+
+team_28_3:
+  season_id: 28
+  division_id: 4
+  team_id: 3
+
+team_28_4:
+  season_id: 28
+  division_id: 4
+  team_id: 4
+
+team_28_5:
+  season_id: 28
+  division_id: 4
+  team_id: 5
+
+team_28_6:
+  season_id: 28
+  division_id: 4
+  team_id: 6
+
+team_28_7:
+  season_id: 28
+  division_id: 4
+  team_id: 7
+
+team_28_8:
+  season_id: 28
+  division_id: 4
+  team_id: 8
+
+team_28_9:
+  season_id: 28
+  division_id: 4
+  team_id: 9
+
+team_28_10:
+  season_id: 28
+  division_id: 4
+  team_id: 10
+
+team_28_11:
+  season_id: 28
+  division_id: 4
+  team_id: 11
+
+team_28_12:
+  season_id: 28
+  division_id: 4
+  team_id: 12
+
+team_28_13:
+  season_id: 28
+  division_id: 4
+  team_id: 13
+
+team_28_14:
+  season_id: 28
+  division_id: 4
+  team_id: 14
+
+team_28_15:
+  season_id: 28
+  division_id: 4
+  team_id: 15
+
+team_29_1:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+
+team_29_3:
+  season_id: 29
+  division_id: 4
+  team_id: 3
+
+team_29_4:
+  season_id: 29
+  division_id: 4
+  team_id: 4
+
+team_29_5:
+  season_id: 29
+  division_id: 4
+  team_id: 5
+
+team_29_6:
+  season_id: 29
+  division_id: 4
+  team_id: 6
+
+team_29_7:
+  season_id: 29
+  division_id: 4
+  team_id: 7
+
+team_29_8:
+  season_id: 29
+  division_id: 4
+  team_id: 8
+
+team_29_9:
+  season_id: 29
+  division_id: 4
+  team_id: 9
+
+team_29_10:
+  season_id: 29
+  division_id: 4
+  team_id: 10
+
+team_29_11:
+  season_id: 29
+  division_id: 4
+  team_id: 11
+
+team_29_13:
+  season_id: 29
+  division_id: 4
+  team_id: 13
+
+team_29_14:
+  season_id: 29
+  division_id: 4
+  team_id: 14
+
+team_29_15:
+  season_id: 29
+  division_id: 4
+  team_id: 15
+
+team_29_16:
+  season_id: 29
+  division_id: 4
+  team_id: 16
+
+team_29_17:
+  season_id: 29
+  division_id: 4
+  team_id: 17

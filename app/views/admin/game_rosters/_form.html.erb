@@ -1,0 +1,49 @@
+<%= form_for([:admin, @game_roster]) do |f| %>
+  <% if @game_roster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@game_roster.errors.count, "error") %> prohibited this game_roster from being saved:</h2>
+
+      <ul>
+      <% @game_roster.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :season_roster %><br />
+    <%= f.text_field :season_roster %>
+  </div>
+  <div class="field">
+    <%= f.label :game %><br />
+    <%= f.text_field :game %>
+  </div>
+  <div class="field">
+    <%= f.label :goal %><br />
+    <%= f.number_field :goal %>
+  </div>
+  <div class="field">
+    <%= f.label :assistrails %><br />
+    <%= f.text_field :assistrails %>
+  </div>
+  <div class="field">
+    <%= f.label :genernalties %><br />
+    <%= f.text_field :genernalties %>
+  </div>
+  <div class="field">
+    <%= f.label :shot_on_goal %><br />
+    <%= f.number_field :shot_on_goal %>
+  </div>
+  <div class="field">
+    <%= f.label :goalie_rails %><br />
+    <%= f.text_field :goalie_rails %>
+  </div>
+  <div class="field">
+    <%= f.label :generatep_flg %><br />
+    <%= f.number_field :generatep_flg %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

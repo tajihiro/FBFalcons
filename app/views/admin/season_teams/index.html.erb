@@ -1,0 +1,27 @@
+<h1>Listing admin_season_teams</h1>
+
+<table>
+  <tr>
+    <th>Season</th>
+    <th>Division</th>
+    <th>Team</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @admin_season_teams.each do |admin_season_team| %>
+  <tr>
+    <td><%= admin_season_team.season %></td>
+    <td><%= admin_season_team.division %></td>
+    <td><%= admin_season_team.team %></td>
+    <td><%= link_to 'Show', admin_season_team %></td>
+    <td><%= link_to 'Edit', edit_admin_season_team_path(admin_season_team) %></td>
+    <td><%= link_to 'Destroy', admin_season_team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Season team', new_admin_season_team_path %>

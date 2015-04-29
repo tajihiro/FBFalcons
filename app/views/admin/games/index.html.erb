@@ -1,0 +1,45 @@
+<div data-role="page" data-add-back-btn="true" data-back-btn-text="Back">
+    <!-- header -->
+    <div data-role="header">
+        <h3>Games</h3>
+        <%= link_to("Menu", admin_menu_index_path, {"data-icon" => "grid", "data-iconpos" => "notext", "class" => "ui-btn-right"}) %>
+    </div>
+    <!-- /header -->
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true">
+            <% @seasons.each do |season| %>
+            <li data-role="list-divider">
+                <%= season.season_name %>
+            </li>
+            <% season.games.each do |game| %>
+            <li>
+                <%= link_to(edit_admin_game_path(game.id)) do %>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a" align="center">
+                        <%= game.game_name %>
+                    </div>
+                    <div class="ui-block-b" align="center">
+                        <%= game.home_team.team_name %>
+                    </div>
+                    <div class="ui-block-c" align="center">
+                        <%= game.home_team_score %> - <%= game.away_team_score %>
+                    </div>
+                    <div class="ui-block-d" align="center">
+                        <%= game.away_team.team_name %>
+                    </div>
+                </div>
+                <% end %>
+            </li>
+            <% end %>
+            <li data-icon="plus">
+                <%= link_to "Add Game", {:controller => "games", :action => "new", :season_id => season.id} %>
+            </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <!-- footer -->
+    <!-- /footer -->
+
+</div>
+

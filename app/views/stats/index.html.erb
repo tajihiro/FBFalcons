@@ -1,0 +1,16 @@
+<div data-role="page">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+    <div data-role="content">
+      <p>Career</p>
+        <!-- Standings -->
+        <%= render "standings", :game_members => @game_members, :show_star => true %>
+        <!-- /Standings -->
+    </div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "stats"%>
+    <!-- /footer -->
+
+</div>

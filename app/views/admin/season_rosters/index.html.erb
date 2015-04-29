@@ -1,0 +1,27 @@
+<h1>Listing season_rosters</h1>
+
+<table>
+  <tr>
+    <th>Season</th>
+    <th>Division</th>
+    <th>Member</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @season_rosters.each do |season_roster| %>
+  <tr>
+    <td><%= season_roster.season %></td>
+    <td><%= season_roster.division %></td>
+    <td><%= season_roster.member %></td>
+    <td><%= link_to 'Show', season_roster %></td>
+    <td><%= link_to 'Edit', edit_admin_season_roster_path(season_roster) %></td>
+    <td><%= link_to 'Destroy', season_roster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Season roster', new_admin_season_roster_path %>

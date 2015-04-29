@@ -1,0 +1,159 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+ksk01:
+  game_id: 1
+  member_id: 1
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 1
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+taji01:
+  game_id: 1
+  member_id: 2
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+shuhe01:
+  game_id: 1
+  member_id: 3
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+tarora01:
+  game_id: 1
+  member_id: 4
+  goal: 0
+  assist: 0
+  goal_against: 23
+  shots_against: 25
+  penalties: 0
+  goalie_flg: 1
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+ksk02:
+  game_id: 2
+  member_id: 1
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 1
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+taji02:
+  game_id: 2
+  member_id: 2
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+shuhe02:
+  game_id: 2
+  member_id: 3
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+tarora02:
+  game_id: 2
+  member_id: 4
+  goal: 0
+  assist: 0
+  goal_against: 23
+  shots_against: 25
+  penalties: 0
+  goalie_flg: 1
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+ksk03:
+  game_id: 3
+  member_id: 1
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 1
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+taji03:
+  game_id: 3
+  member_id: 2
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+shuhe03:
+  game_id: 3
+  member_id: 3
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+billy03:
+  game_id: 3
+  member_id: 5
+  goal: 2
+  assist: 1
+  goal_against: 0
+  shots_against: 0
+  penalties: 0
+  goalie_flg: 0
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+tarora03:
+  game_id: 3
+  member_id: 4
+  goal: 0
+  assist: 0
+  goal_against: 23
+  shots_against: 25
+  penalties: 0
+  goalie_flg: 1
+  mvp_flg: 0
+  created_at: 2013-06-01
+  updated_at: 2013-06-01
+            

@@ -1,0 +1,25 @@
+<div data-role="page">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+
+    <div data-role="content">
+        <!-- Season list -->
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider">Season History</li>
+            <% @seasons.each do |season| %>
+            <li>
+                <%= link_to season.season_name + "(" + season.season_start + "-" + season.season_end + ")",
+                {:controller => "games", :action => "season_result", :id => season.id} %>
+            </li>
+            <% end %>
+        </ul>
+        <!-- /Season list -->
+
+    </div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "Games"%>
+    <!-- /footer -->
+
+</div>

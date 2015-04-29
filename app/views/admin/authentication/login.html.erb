@@ -1,0 +1,32 @@
+<div data-role="page">
+    <!-- header -->
+    <%= render "header_admin"%>
+    <!-- /header -->
+
+    <div data-role="content">
+        <%= form_tag(admin_authentication_auth_path, "data-ajax" => "false") do %>
+        <div data-role="fieldcontain">
+            <!-- error message -->
+            <% if flash[:msg] %>
+            <p>
+                <font color="red">※<%= flash[:msg]%></font>
+            </p>
+            <% end %>
+            <!-- /error message -->
+            <fieldset data-role="controlgroup">
+                <label for="textinput"> パスワード </label>
+                <br/>
+                <%= text_field_tag(:passwd, nil, :placeholder => "パスワード") %>
+            </fieldset>
+        </div>
+
+        <div>
+            <%= button_tag "ログイン" %>
+        </div>
+        <% end %>
+    </div>
+    
+    <!-- footer -->
+    <!-- /footer -->
+
+</div>

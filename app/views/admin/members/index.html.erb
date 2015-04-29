@@ -1,0 +1,45 @@
+<h1>Listing members</h1>
+
+<table>
+  <tr>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Last en name</th>
+    <th>First en name</th>
+    <th>Nick name</th>
+    <th>Jersey number</th>
+    <th>Position</th>
+    <th>Gender</th>
+    <th>Address</th>
+    <th>Birth place</th>
+    <th>Birthday</th>
+    <th>Image url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @members.each do |member| %>
+  <tr>
+    <td><%= member.last_name %></td>
+    <td><%= member.first_name %></td>
+    <td><%= member.last_en_name %></td>
+    <td><%= member.first_en_name %></td>
+    <td><%= member.nick_name %></td>
+    <td><%= member.jersey_number %></td>
+    <td><%= member.position %></td>
+    <td><%= member.gender %></td>
+    <td><%= member.address %></td>
+    <td><%= member.birth_place %></td>
+    <td><%= member.birthday %></td>
+    <td><%= member.image_url %></td>
+    <td><%= link_to 'Show', member %></td>
+    <td><%= link_to 'Edit', edit_admin_member_path(member) %></td>
+    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Member', new_admin_member_path %>

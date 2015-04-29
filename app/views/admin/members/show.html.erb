@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Last name:</b>
+  <%= @member.last_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @member.first_name %>
+</p>
+
+<p>
+  <b>Last en name:</b>
+  <%= @member.last_en_name %>
+</p>
+
+<p>
+  <b>First en name:</b>
+  <%= @member.first_en_name %>
+</p>
+
+<p>
+  <b>Nick name:</b>
+  <%= @member.nick_name %>
+</p>
+
+<p>
+  <b>Jersey number:</b>
+  <%= @member.jersey_number %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @member.position %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @member.gender %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @member.address %>
+</p>
+
+<p>
+  <b>Birth place:</b>
+  <%= @member.birth_place %>
+</p>
+
+<p>
+  <b>Birthday:</b>
+  <%= @member.birthday %>
+</p>
+
+<p>
+  <b>Image url:</b>
+  <%= @member.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_member_path(@member) %> |
+<%= link_to 'Back', admin_members_path %>

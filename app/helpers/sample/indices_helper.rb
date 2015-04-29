@@ -1,0 +1,2 @@
+module Sample::IndicesHelper
+end

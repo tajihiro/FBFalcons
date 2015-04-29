@@ -1,0 +1,101 @@
+<!-- Goalie Standings -->
+<div data-role="listview">
+    <li data-role="list-divider">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                Name
+            </div>
+            <div class="ui-block-c">
+                Save%
+            </div>
+            <div class="ui-block-e">
+                Save
+            </div>
+            <div class="ui-block-d">
+                SOG
+            </div>
+            <div class="ui-block-b">
+                PIM
+            </div>
+        </div>
+    </li>
+    <% @game_members.each do | member | %>
+    <% if member.goalie_flg == 1 %>
+    <li data-icon="search">
+        <%= link_to({:controller => "players", :action => "detail", :id => member.member_id}) do %>
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                <% if member.mvp_flg == 1 && show_star %>
+                <i class="icon-star"></i> 
+                <% end %>
+                <%= member.last_name %>
+            </div>
+            <div class="ui-block-b" align="center">
+                <%= number_with_precision(member.save_ave, :precision => 3)  %>
+            </div>
+            <div class="ui-block-c" align="center">
+                <%= member.saves %>
+            </div>
+            <div class="ui-block-d" align="center">
+                <%= member.shot_on_goal %>
+            </div>
+            <div class="ui-block-e" align="center">
+                <%= member.penalties  %>
+            </div>
+        </div> 
+        <% end %>
+    </li>
+    <% end %>
+    <% end %>
+</div>
+<p></p>
+<!-- Player Standings -->
+<div data-role="listview">
+    <li data-role="list-divider">
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                Name
+            </div>
+            <div class="ui-block-b">
+                Goal
+            </div>
+            <div class="ui-block-c">
+                Aassist
+            </div>
+            <div class="ui-block-d">
+                Point
+            </div>
+            <div class="ui-block-e">
+                PIM
+            </div>
+        </div>
+    </li>
+    <% @game_members.each do | member | %>
+    <% if member.goalie_flg != 1 %>
+    <li data-icon="search">
+        <%= link_to({:controller => "players", :action => "detail", :id => member.member_id}) do %>
+        <div class="ui-grid-d">
+            <div class="ui-block-a">
+                <% if member.mvp_flg == 1 && show_star %>
+                <i class="icon-star"></i> 
+                <% end %>
+                <%= member.last_name %>
+            </div>
+            <div class="ui-block-b" align="center">
+                <%= member.goal  %>
+            </div>
+            <div class="ui-block-c" align="center">
+                <%= member.assist  %>
+            </div>
+            <div class="ui-block-d" align="center">
+                <%= member.point.truncate  %>
+            </div>
+            <div class="ui-block-e" align="center">
+                <%= member.penalties  %>
+            </div>
+        </div>
+        <% end %>
+    </li>
+    <% end %>
+    <% end %>
+</div>

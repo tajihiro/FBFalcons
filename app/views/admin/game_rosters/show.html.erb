@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Season roster:</b>
+  <%= @game_roster.season_roster %>
+</p>
+
+<p>
+  <b>Game:</b>
+  <%= @game_roster.game %>
+</p>
+
+<p>
+  <b>Goal:</b>
+  <%= @game_roster.goal %>
+</p>
+
+<p>
+  <b>Assistrails:</b>
+  <%= @game_roster.assistrails %>
+</p>
+
+<p>
+  <b>Genernalties:</b>
+  <%= @game_roster.genernalties %>
+</p>
+
+<p>
+  <b>Shots against:</b>
+  <%= @game_roster.shot_on_goal %>
+</p>
+
+<p>
+  <b>Goalie rails:</b>
+  <%= @game_roster.goalie_rails %>
+</p>
+
+<p>
+  <b>Generatep flg:</b>
+  <%= @game_roster.generatep_flg %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_game_roster_path(@game_roster) %> |
+<%= link_to 'Back', admin_game_rosters_path %>

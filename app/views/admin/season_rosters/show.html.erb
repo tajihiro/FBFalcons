@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Season:</b>
+  <%= @season_roster.season %>
+</p>
+
+<p>
+  <b>Division:</b>
+  <%= @season_roster.division %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%= @season_roster.member %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_season_roster_path(@season_roster) %> |
+<%= link_to 'Back', admin_season_rosters_path %>

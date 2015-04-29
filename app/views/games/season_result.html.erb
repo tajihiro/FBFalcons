@@ -1,0 +1,53 @@
+<div data-role="page" data-add-back-btn="true" data-back-btn-text="Back">
+    <!-- header -->
+    <%= render "header_portal"%>
+    <!-- /header -->
+
+    <div data-role="content">
+        <p>
+            <b><%= @season.season_name %> (<%= @season.season_start %> - <%= @season.season_end %>)</b>
+        </p>
+
+        <!-- Standings -->
+        <%= render "standings", :game_members => @game_members, :show_star => false %>
+        <!-- /Standings -->
+
+        <br/>
+        <br/>
+
+        <!-- Season Game List -->
+        <ul data-role="listview" data-inset="true">
+            <li data-role="list-divider"><%= @season.season_name %> Games</li>
+            <% @games.each do |game| %>
+            <li>
+                <%= link_to({:controller => "games", :action => "game_result", :id => game.id}) do %>
+                <div class="ui-grid-c">
+                    <div class="ui-block-a" align="left">
+                        <%= game.game_name %>
+                        <% if ((game.away_team.id == 1) && (game.away_team_score > game.home_team_score)) || 
+                              ((game.home_team.id == 1) && (game.away_team_score < game.home_team_score))%>
+                    	<i class="icon-trophy"></i> 
+                    	<% end %>
+                    </div>
+                    <div class="ui-block-b" align="center">
+                    	<%= truncate(game.away_team.team_name, :length => 10, :omission => "...") %>
+                    </div>
+                    <div class="ui-block-c" align="center">
+                        <%= game.away_team_score %> - <%= game.home_team_score %>
+                    </div>
+                    <div class="ui-block-d" align="center">
+                        <%= truncate(game.home_team.team_name, :length => 10, :omission => "...") %>
+                    </div>
+                </div>
+                <% end %>
+            </li>
+            <% end %>
+        </ul>
+
+    </div>
+
+    <!-- footer -->
+    <%= render "footer_portal", :menu => "Games"%>
+    <!-- /footer -->
+
+</div>

@@ -1,0 +1,124 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+ksk28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 1
+taji28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 2
+shuhe28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 3
+masaya28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 5
+takama28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 6
+tsutomu28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 10
+koichi28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 11
+shingo28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 9
+keiji28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 7
+katsu28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 8
+tarora28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 4
+nobu28:
+  season_id: 28
+  division_id: 4
+  team_id: 1
+  member_id: 22
+
+ksk29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 1
+taji29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 2
+shuhe29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 3
+masaya29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 5
+takama29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 6
+tsutomu29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 10
+koichi29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 11
+shingo29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 9
+keiji29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 7
+katsu29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 8
+tarora29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 4
+nobu29:
+  season_id: 29
+  division_id: 4
+  team_id: 1
+  member_id: 22
+  
